@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+  <div style="margin-top: 2%;">
+    <div style="width:100%; display: flex; justify-content: center">
+      <h1> Secret Log </h1>
+    </div>
+    <div style="width:100%; display: flex; justify-content: center">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for e in log %}
+          <tr>
+            <td>{{e[0]}}</td>
+            <td>{{e[1]}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
